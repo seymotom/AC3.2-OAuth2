@@ -69,7 +69,7 @@ internal class GithubOAuthManager {
     
     var request = URLRequest(url: urlComponents!.url!)
     request.httpMethod = "POST"
-//    request.setValue("application/json", forHTTPHeaderField: "Accept")
+    request.setValue("application/json", forHTTPHeaderField: "Accept")
     
     let session = URLSession(configuration: .default)
     session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
@@ -81,17 +81,49 @@ internal class GithubOAuthManager {
       if data != nil {
         
         // exercise: turn data into a string
-        if let accessTokenInfo = String.init(data: data!, encoding: .utf8) {
-          print("accessTokenInfo: \(accessTokenInfo)")
-          
-          
-        }
-
+//        self.accessToken = self.token(data: data!)
         
+        // exercise: turn data into dict
+        self.accessToken = "\(self.token(jsonData: data!))"
+        
+        print("Token: \(self.accessToken)")
       }
       
     }).resume()
     
+  }
+  
+  private func token(jsonData: Data) -> String? {
+    
+    do {
+      let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : String]
+      return json?["access_token"]
+    }
+    catch {
+      print("Error encountered parsing json: \(error)")
+    }
+    
+    return nil
+  }
+  
+  private func token(data: Data) -> String? {
+    if let accessTokenInfo = String.init(data: data, encoding: .utf8) {
+      print("accessTokenInfo: \(accessTokenInfo)")
+      
+      let queryComponents = accessTokenInfo.components(separatedBy: "&")
+      let accessToken = queryComponents.flatMap({ (query: String) -> String? in
+        let components = query.components(separatedBy: "=")
+        guard
+          let keyComponent = components.first,
+          let valueComponent = components.last,
+          keyComponent == "access_token"
+          else { return nil }
+        return valueComponent
+      })
+      
+      return accessToken.first
+    }
+    return nil
   }
   
 }
