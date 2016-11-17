@@ -78,6 +78,21 @@ internal class GithubOAuthManager {
         print("Error encountered on token request: \(error!)")
       }
       
+      if response != nil {
+        print("Response: \(response)")
+        
+        // how do we know it's utf8 for that data->string conversion? 
+         print(response!.textEncodingName!)
+        
+        // what about all that header info?
+         print(response.unsafelyUnwrapped)
+        
+        // how about that whole status code thing?
+        if let httpResponse = response as? HTTPURLResponse {
+          print(httpResponse.statusCode)
+        }
+      }
+      
       if data != nil {
         
         // exercise: turn data into a string
