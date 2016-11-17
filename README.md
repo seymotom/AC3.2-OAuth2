@@ -16,3 +16,33 @@ Handling APIs that Require OAuth2
 ### Optional: 
 1. [User Authentication With OAuth 2.0 - OAuth.net](https://oauth.net/articles/authentication/)
 2. [App Lifecycle - Apple](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html)
+
+---
+### Lesson Objectives
+- Review remaining exercises for PUT/DELETE from tuesday
+- Introduce the concept of an OAuth flow
+- Briefly go over `AppDelegate` functions
+- Briefly go over app lifecycle
+- Implement an OAuth flow from beginning to end using an "Implicit Flow"
+- Time permitting, start making calls to the GithubAPI to star/unstar repos
+
+---
+### Lesson Roadmap
+
+1. Creating `GithubOAuthManager` 
+2. Making a `GET` request to Github's authorization server
+3. Write code to accept a valid response from Github
+4. Make a `POST` request to Github's access token server
+5. Inspect response from Github
+  - Peek at what exactly is in the `URLResponse`
+  - Parse `Data` into `String`
+6. Change `Accept` header in `POST` request to `application/json`
+  - Parse `Data` using `JSONSerialization`
+7. Creating `GithubRequestManager`
+8. TBD
+  
+
+---
+### Exercises
+
+TBD based on day's progress
