@@ -108,6 +108,10 @@ internal class GithubOAuthManager {
     
   }
   
+  internal func token() -> String? {
+    return self.accessToken
+  }
+  
   private func token(jsonData: Data) -> String? {
     
     do {

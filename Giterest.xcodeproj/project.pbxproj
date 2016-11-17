@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14DEA7BB1DDD776F007AEA56 /* GithubRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */; };
 		14EB9FBE1DDD3CEA00CC0D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB9FBD1DDD3CEA00CC0D29 /* AppDelegate.swift */; };
 		14EB9FC01DDD3CEA00CC0D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB9FBF1DDD3CEA00CC0D29 /* ViewController.swift */; };
 		14EB9FC31DDD3CEA00CC0D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EB9FC11DDD3CEA00CC0D29 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequestManager.swift; sourceTree = "<group>"; };
 		14EB9FBA1DDD3CEA00CC0D29 /* Giterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EB9FBD1DDD3CEA00CC0D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14EB9FBF1DDD3CEA00CC0D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				14EB9FF81DDD3D0F00CC0D29 /* Giterest_FullTests.swift */,
 				14EB9FFA1DDD3D0F00CC0D29 /* Info.plist */,
+				14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */,
 			);
 			path = "Giterest-FullTests";
 			sourceTree = SOURCE_ROOT;
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DEA7BB1DDD776F007AEA56 /* GithubRequestManager.swift in Sources */,
 				14EB9FE61DDD3D0F00CC0D29 /* ViewController.swift in Sources */,
 				14EB9FE41DDD3D0F00CC0D29 /* AppDelegate.swift in Sources */,
 				14EBA0031DDD3E3200CC0D29 /* GithubOAuthManager.swift in Sources */,
