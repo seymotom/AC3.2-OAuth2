@@ -18,11 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     GithubOAuthManager.configure(clientID: "b1b766645e040ea3946b", clientSecret: "8b80dd07219f5a0143f19a66e2cd213d2cbd97c2")
     do {
-     try GithubOAuthManager.shared.requestAuthentication(scopes: [.user,.public_repo])
+     try GithubOAuthManager.shared.requestAuthentication(scopes: [.public_repo, .user])
     }
     catch {
       print("Error encountered opening auth")
     }
+    
+    return true
+  }
+  
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+
+    guard
+      let sourceApp = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? NSString,
+      sourceApp == "com.apple.mobilesafari"
+    else {
+      return false
+    }
+    
+    GithubOAuthManager.shared.requestAuthToken(from: url)
     
     return true
   }

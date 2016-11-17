@@ -143,8 +143,8 @@
 			children = (
 				14EB9FF71DDD3D0F00CC0D29 /* Giterest-FullTests */,
 				14EB9FE51DDD3D0F00CC0D29 /* ViewController.swift */,
-				14EBA0011DDD3E0600CC0D29 /* Supporting FIles */,
 				14EBA0021DDD3E3200CC0D29 /* GithubOAuthManager.swift */,
+				14EBA0011DDD3E0600CC0D29 /* Supporting FIles */,
 			);
 			path = "Giterest-Full";
 			sourceTree = "<group>";
@@ -632,6 +632,7 @@
 				14EB9FD91DDD3CEA00CC0D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14EB9FDA1DDD3CEA00CC0D29 /* Build configuration list for PBXNativeTarget "GiterestTests" */ = {
 			isa = XCConfigurationList;
@@ -640,6 +641,7 @@
 				14EB9FDC1DDD3CEA00CC0D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14EB9FFB1DDD3D0F00CC0D29 /* Build configuration list for PBXNativeTarget "Giterest-Full" */ = {
 			isa = XCConfigurationList;
@@ -648,6 +650,7 @@
 				14EB9FFD1DDD3D0F00CC0D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14EB9FFE1DDD3D0F00CC0D29 /* Build configuration list for PBXNativeTarget "Giterest-FullTests" */ = {
 			isa = XCConfigurationList;
@@ -656,6 +659,7 @@
 				14EBA0001DDD3D0F00CC0D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
